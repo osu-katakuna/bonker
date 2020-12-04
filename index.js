@@ -11,13 +11,13 @@ const MySQL = require('sync-mysql');
 
 const defaultConfiguration = {
   database: {
-    host: "localhost",
+    host: process.env.DB_HOST || "localhost",
     port: 3306,
-    username: "shiori",
-    password: "shiori",
-    database: "shiori"
+    username: process.env.DB_USER || "shiori",
+    password: process.env.DB_PASSWORD || "shiori",
+    database: process.env.DB_DATABASE || "shiori"
   },
-  avatarPath: "/katakuna/storage/a",
+  avatarPath: process.env.STORAGE_LOCATION || "/katakuna/storage/a",
   defaultAvatar: "default/default.png",
   ssl: {
     enabled: false,
