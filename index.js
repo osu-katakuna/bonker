@@ -34,10 +34,10 @@ console.log(Buffer.from("Ojo6Ojo6Ojo6ICAgOjo6Ojo6OjogIDo6OjogICAgOjo6IDo6OiAgICA
 console.log("\x1b[0m");
 // done.
 
-Logger.Info(`Welcome to Bonker.`);
+Logger.Info(`Welcome to Bonker, the best avatar server written by r0neko!`);
 
 // load config
-let configPath = path.join(path.dirname(require.main.filename), `./config.json`);
+let configPath = path.join(path.dirname(require.main.filename), `./config/config.json`);
 Logger.Info(`Loading the configuration...`);
 if(!fs.existsSync(configPath)) {
   Logger.Failure(`Configuration not found!`);
